@@ -1,0 +1,154 @@
+*{margin: 0; padding: 0; font-family: 'Rubik', sans-serif; }
+
+.navsection{
+  width: 100%; height: 20vh; background-color: yellow;
+  display: flex; justify-content: space-around;
+  align-items: center;
+  background-image: linear-gradient(to top, #fff 80%, #c3f5ff 20%);
+}
+
+.logo{
+  width: 50;
+  color: #fff;
+  background-image: linear-gradient(#8d98c3 40%, #854fee 60%);
+  padding-left: 100px;
+  padding-right: 100px;
+  box-sizing: border-box;
+}
+
+.logo h1{
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  animation: aagepiche 2s linear infinite;
+  animation-direction: alternate;
+}
+
+@keyframes aagepiche{
+  from{ padding-left: 40px; }
+  to{ padding-right: 40px; }
+}
+
+nav{
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a{
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  font-size: 20px;
+  position: relative;
+}
+
+nav a:before{
+  content: "";
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  border-bottom: 3px solid #4458dc;
+  transition: all 0.4s linear;
+}
+
+nav a:hover:before{
+  width: 100%;
+}
+
+main{
+  height: 80vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+
+section {
+  height: 100vh;
+  width: 100%;
+  background-color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  box-shadow: 0px 0px 20px #00000010;
+  background-color: white;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.form-group {
+  width: 100%;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 5px;
+  font-size: 18px;
+  border: 1px solid rgba(128, 128, 128, 0.199);
+  margin-top: 5px;
+}
+
+textarea {
+  resize: vertical;
+}
+button[type="submit"] {
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 8px;
+  font-family: "Montserrat";
+  color: rgb(27, 166, 247);
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s ease background-color;
+}
+button[type="submit"]:hover {
+  background-color: rgb(214, 226, 236);
+}
+#status {
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  padding: 10px;
+  margin: 0 auto;
+  border-radius: 8px;
+}
+#status.success {
+  background-color: rgb(211, 250, 153);
+  animation: status 4s ease forwards;
+}
+#status.error {
+  background-color: rgb(250, 129, 92);
+  color: white;
+  animation: status 4s ease forwards;
+}
+@keyframes status {
+  0% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  90% {
+    opacity: 1;
+    pointer-events: all;
+  }
+  100% {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
